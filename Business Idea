@@ -1,0 +1,17 @@
+
+Business Idea:
+To implement voice assistant in grocery shops like D mart to assist user in finding out the 
+offers available on different items and to locate the items from different queues in the shop.
+
+Approach/Solution:
+1.	The approach starts from gathering the required information on all the items like location and offers.
+2.	Then we need to maintain all this data in a database.
+3.	Implement the lambda function and integrate with database.
+4.	Finally integrate lambda function with voice assistant.
+
+Benefits/Advantages:
+1.	Avoid manual intervention
+2.	Fast and immediate locating of items
+3.	Avoid sticking/labelling of new prices
+4.	Limit the number of workers
+5.	Save paper and effort by avoid pricing on each item
