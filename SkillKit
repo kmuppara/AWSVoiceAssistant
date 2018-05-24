@@ -1,0 +1,51 @@
+
+Skill Name:
+D mart Assistant
+
+Invocation Name:
+D mart
+
+General Concept:
+A skill that help customers to find offers and locate items.
+
+Possible Invocation Requests Example:
+D mart where can I get {Grocery}
+D mart to suggest {Home Appliance} location
+D mart location of {Personal Care}
+D mart where to go for {Toys}
+D mart what are all the offers
+D mart what are all the offers on {Grocery}
+D mart offers on {Home Appliance}
+D mart offers available
+
+Example Dialog:
+Key Features:
+Location suggestion by items
+Offer suggestion by items
+
+Secondary Features:
+Intents:
+LocateItems
+FindOffers
+BillingProcess
+TrendingItems
+
+
+Slots:
+Grocery
+Home Appliance
+Personal Care
+Toys
+Items
+
+Utterances:
+   Intent	          Utterance	                        Example
+LocateItems	where can I get {Grocery/Items}	Ask d mart where can I get {Grocery}
+LocateItems	to suggest {Home Appliance} location	Ask d mart to suggest {Home Appliance} location
+LocateItems	location of {Personal Care}	Ask d mart location of {Personal Care}
+LocateItems	where to go for {Toys}	Ask d mart where to go for {Toys}
+FindOffers	offers on {Home Appliance}	Ask d mart offers on {Home Appliance}
+FindOffers	what are the offers on {Grocery}	Ask d mart what are the offers on {Grocery}
+FindOffers	what are the offers	Ask d mart what are the offers
+FindOffers	offers available	Ask d mart offers available
+
