@@ -11,7 +11,7 @@ public class Services {
 	private static DataDB db = new DataDB();
 
 	public ResponseObj launchAlexa(Map<String, Object> request) {
-		ops = new OutputSpeech("PlainText", "Welcome to retail store. We are here to assist you in locating items, finding offers, product details, Purchase history and recommendation on items. How can i assist you?");
+		ops = new OutputSpeech("PlainText", "Welcome to big bazaar. We are here to assist you in locating items, finding offers, product details, Purchase history and recommendation on items. How can i assist you?");
 		
 		response = new ResponseObj(new IntentObj(ops));
 
@@ -99,9 +99,31 @@ public class Services {
 		
 		///////////
 		else if ("PurchaseHistory".equalsIgnoreCase(intentName)) {
-			data = "You have purchased one cooker with fully automated and two soaps. Would you like to buy any of them once again?";
+			/*data = "You have purchased one cooker with fully automated and two soaps. Would you like to buy any of them once again?";
 			ops = new OutputSpeech("PlainText", data);
-			response = new ResponseObj(new IntentObj(ops));
+			response = new ResponseObj(new IntentObj(ops));*/
+			
+			/*Map<String, Object> slotMap = (Map<String, Object>) intentMap.get("slots");
+			Map<String, Object> custMap = (Map<String, Object>) slotMap.get("CustomerId");
+			String custId = (String)custMap.get("value");
+			//data = db.itemLocator(custId);
+			 */
+			
+			data = "We are very sorry David to say that cookers are not available at this moment. We will try to make it available soon in the inventory.";
+			
+			
+			if("NONE".equalsIgnoreCase(confirmationStatus) && ("STARTED".equalsIgnoreCase(dialogState) || "IN_PROGRESS".equalsIgnoreCase(dialogState))){
+				response = new ResponseObj(new IntentObj(dialogState));
+			}
+			else if("CONFIRMED".equalsIgnoreCase(confirmationStatus)){
+				ops = new OutputSpeech("PlainText", data);
+				response = new ResponseObj(new IntentObj(ops));
+			}
+			else{//DENIED CASE
+				data = "That's cool. Seems you changed your mind. Please let us know if you still want any other information.";
+				ops = new OutputSpeech("PlainText", data);
+				response = new ResponseObj(new IntentObj(ops));
+			}
 		}
 		
 		//////////
@@ -138,13 +160,13 @@ public class Services {
 		} 
 		
 		else if ("AMAZON.HelpIntent".equalsIgnoreCase(intentName)) {
-			//ops = new OutputSpeech("PlainText", "Welcome to retail store, We are here to assist you in locating items, finding offers, product details, Purchase history and recommendation on items.");
-			ops = new OutputSpeech("", "Thank for visiting retail store. It's please to assist you. Have a great day!!");
+			//ops = new OutputSpeech("PlainText", "Welcome to big bazaar, We are here to assist you in locating items, finding offers, product details, Purchase history and recommendation on items.");
+			ops = new OutputSpeech("", "Thank for visiting big bazaar. It's please to assist you. Have a great day!!");
 			response = new ResponseObj(new IntentObj(ops));
 		} 
 		
 		else if ("AMAZON.StopIntent".equalsIgnoreCase(intentName) || "AMAZON.CancelIntent".equalsIgnoreCase(intentName)) {
-			ops = new OutputSpeech("PlainText", "Thank for visiting retail store. It's pleasure to assist you. Have a great day!!");
+			ops = new OutputSpeech("PlainText", "Thank for visiting big bazaar. It's pleasure to assist you. Have a great day!!");
 			response = new ResponseObj(new IntentObj(ops));
 		} 
 		
@@ -152,7 +174,7 @@ public class Services {
 	}
 
 	public ResponseObj endRequest(Map<String, Object> request) {
-		OutputSpeech ops = new OutputSpeech("PlainText", "Thank for visiting retail store. It's please to assist you. Have a great day!!");
+		OutputSpeech ops = new OutputSpeech("PlainText", "Thank for visiting big bazaar. It's please to assist you. Have a great day!!");
 		ResponseObj response = new ResponseObj(new IntentObj(ops));
 		return response;
 	}

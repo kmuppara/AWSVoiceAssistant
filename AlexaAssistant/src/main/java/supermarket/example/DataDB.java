@@ -11,10 +11,10 @@ public class DataDB {
 	private static Map<String, String> recomendations = new HashMap<>(); 
 	
 	static{
-		itemsPlace.put("grocery", "grocery is available in ground floor at first rack");
-		itemsPlace.put("personal care", "personal care is available in ground floor at second rack");
-		itemsPlace.put("toys", "toys are available in second floor at third rack");
-		itemsPlace.put("home appliances", "home appliances are available in second floor at second rack");
+		itemsPlace.put("grocery", "grocery is available in ground floor at first bay");
+		itemsPlace.put("personal care", "personal care is available in ground floor at second bay");
+		itemsPlace.put("toys", "toys are available in second floor at third bay");
+		itemsPlace.put("home appliances", "home appliances are available in second floor at second bay");
 		
 		offers.put("grocery", "Ten percent discount on minimum purchase of five hundred rupees");
 		offers.put("personal care", "Buy any two soaps and get one soap for free");
@@ -26,7 +26,7 @@ public class DataDB {
 		
 		
 		recomendations.put("soaps", "We recommend luxx since it is having good moisturing and cost is low compared to other's.");
-		recomendations.put("biscuts", "We recommend parle g since it's a most purchased product.");
+		recomendations.put("biscuits", "We recommend parle g since it's a most purchased product.");
 		
 	}
 
@@ -37,7 +37,7 @@ public class DataDB {
 	
 	public String itemLocator(String itemNm, String offerNm) {
 		String data = itemsPlace.get(itemNm);
-		if("yes".equalsIgnoreCase(offerNm))
+		if("yes".equalsIgnoreCase(offerNm) || "offers".equalsIgnoreCase(offerNm))
 			data += " And "+offers.get(itemNm);
 		return data;
 	}
