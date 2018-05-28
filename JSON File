@@ -1,0 +1,549 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "big bazaar",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "forget it",
+                        "never mind",
+                        "no",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "can you help me",
+                        "help me in purchase",
+                        "guide me in purchase",
+                        "guide me in shopping",
+                        "help me in shopping",
+                        "help me",
+                        "how to access alexa"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "end",
+                        "stop conversation",
+                        "off",
+                        "shut up",
+                        "bye",
+                        "done",
+                        "close",
+                        "stop",
+                        "exit"
+                    ]
+                },
+                {
+                    "name": "ItemLocator",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "samples": [
+                                "{item} i would like to find",
+                                "i would lik e to find {item}",
+                                "{item} i would like to locate",
+                                "i would to locate {item} .",
+                                "{item}"
+                            ]
+                        },
+                        {
+                            "name": "offers",
+                            "type": "YES",
+                            "samples": [
+                                "{offers} i would like to get offers",
+                                "{offers} please",
+                                "{offers}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "help me in finding the location of {item} and {offers} on them",
+                        "help me in finding the location of goods",
+                        "where can i find location of goods",
+                        "where can i get goods",
+                        "location of goods ",
+                        "find location of",
+                        "locator",
+                        "please locate",
+                        "locate",
+                        "location",
+                        "where can i get",
+                        "location of {item}",
+                        "locate {item}",
+                        "locate the {item}",
+                        "please locate the {item}",
+                        "where can i get {item}"
+                    ]
+                },
+                {
+                    "name": "welcomepage",
+                    "slots": [],
+                    "samples": [
+                        "ask big bazaar",
+                        "open big bazaar"
+                    ]
+                },
+                {
+                    "name": "offerFinder",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "samples": [
+                                "{item}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "suggest offers available",
+                        "offers for {item}",
+                        "offers on {item}",
+                        "offers available on {item}",
+                        "offers available",
+                        "what are the offers for today"
+                    ]
+                },
+                {
+                    "name": "ProductDetails",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "samples": [
+                                "{item}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "give the details of {item}",
+                        "productdetails",
+                        "details",
+                        "product details",
+                        "product details of {item}",
+                        "details of {item}"
+                    ]
+                },
+                {
+                    "name": "PurchaseHistory",
+                    "slots": [
+                        {
+                            "name": "CustomerId",
+                            "type": "Customer_Id",
+                            "samples": [
+                                "{CustomerId}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "purchase history of {CustomerId}",
+                        "my previous purchase history",
+                        "history of purchase",
+                        "purchasehistory",
+                        "purchase history"
+                    ]
+                },
+                {
+                    "name": "Recommendations",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "samples": [
+                                "{item}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "suggest any {item}",
+                        "any recommendation",
+                        "any recommendation on {item}",
+                        "{item} recommendations",
+                        "recommendations on {item}"
+                    ]
+                },
+                {
+                    "name": "TrendingItems",
+                    "slots": [],
+                    "samples": [
+                        "trendingitems",
+                        "trending items",
+                        "liked products",
+                        "rated prodcuts",
+                        "highest purchased products",
+                        "most purchased products",
+                        "most sold products",
+                        "latest products in store",
+                        "trending products in store"
+                    ]
+                },
+                {
+                    "name": "yesIntent",
+                    "slots": [],
+                    "samples": [
+                        "correct",
+                        "all right",
+                        "right",
+                        "yeah",
+                        "yup",
+                        "ok",
+                        "sure",
+                        "yes"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Item_Category",
+                    "values": [
+                        {
+                            "id": "BC",
+                            "name": {
+                                "value": "biscuits"
+                            }
+                        },
+                        {
+                            "id": "SP",
+                            "name": {
+                                "value": "soaps"
+                            }
+                        },
+                        {
+                            "id": "CR",
+                            "name": {
+                                "value": "Cooker"
+                            }
+                        },
+                        {
+                            "id": "AC",
+                            "name": {
+                                "value": "Air conditioner"
+                            }
+                        },
+                        {
+                            "id": "PC",
+                            "name": {
+                                "value": "personal care"
+                            }
+                        },
+                        {
+                            "id": "HA",
+                            "name": {
+                                "value": "home appliance"
+                            }
+                        },
+                        {
+                            "id": "GC",
+                            "name": {
+                                "value": "grocery"
+                            }
+                        },
+                        {
+                            "id": "TY",
+                            "name": {
+                                "value": "toys"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "YES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "offers"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "no"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yes"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Customer_Id",
+                    "values": [
+                        {
+                            "id": "Id",
+                            "name": {
+                                "value": "customerId"
+                            }
+                        },
+                        {
+                            "id": "5678",
+                            "name": {
+                                "value": "5678"
+                            }
+                        },
+                        {
+                            "id": "1234",
+                            "name": {
+                                "value": "1234"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ItemLocator",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1484297226365"
+                    },
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1145399276766.1182042848111"
+                            }
+                        },
+                        {
+                            "name": "offers",
+                            "type": "YES",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.938549715253.1200031322795"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "offerFinder",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.219375963783"
+                    },
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.449636560232.594918829766"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductDetails",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1038699658203"
+                    },
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1038699658203.413163002059"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Recommendations",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.980898186853"
+                    },
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "Item_Category",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.458624269294.349134787382"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PurchaseHistory",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1167051238493"
+                    },
+                    "slots": [
+                        {
+                            "name": "CustomerId",
+                            "type": "Customer_Id",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1167051238493.55361241395"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.66943514620",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You are looking for {item} . Right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1145399276766.1182042848111",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Okay, Please provide an item"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1145399276766.1182042848111",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You would like to find {item} . Right"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.449636560232.594918829766",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Sure, Please provide an item"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.449636560232.594918829766",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You are looking offers on {item} . Right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1038699658203",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you looking for {item}"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1038699658203.413163002059",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "All right, please provide an item"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1038699658203.413163002059",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You are looking details about {item} . Right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.980898186853",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you looking for {item}"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.219375963783",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You are looking for {item} . Right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.458624269294.349134787382",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Yes, Please provide an item"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.938549715253.1200031322795",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "would you like to get some offers as well on {item} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1484297226365",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Just a moment to fecth details. Is it Okay?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1167051238493",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Welcome back David Jon. Happy to see you again. You have purchased one cooker with fully automated and two soaps. Would you like to add these products again to your cart?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1167051238493.55361241395",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Kindly provide your customer Id."
+                    }
+                ]
+            }
+        ]
+    }
+}
